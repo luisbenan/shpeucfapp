@@ -50,6 +50,12 @@ import {
       privilege: "user"
     },
     {
+      title: 'Statistics',
+      icon: 'timeline',
+      screen: 'Statistics',
+      privilege: "user"
+   },
+    {
       title: 'BackEnd',
       icon: 'settings',
       screen: 'BackEnd',
@@ -65,9 +71,9 @@ class More extends Component {
   }
 
   keyExtractor = (item, index) => index
- 
+
   renderItem  = ({item}) => {
-    
+
     if (this.props.privilege !== undefined && this.props.privilege[item.privilege] === true ) {
       return(
         <ListItem
