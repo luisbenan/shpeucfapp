@@ -18,6 +18,7 @@ import {
     goToCreateEvent,
     goToEvents
 } from '../../actions'
+import { Actions } from 'react-native-router-flux';
 
 
 class CreateEvent extends Component {
@@ -157,7 +158,7 @@ class CreateEvent extends Component {
                         />
                         <Button 
                             title = "CANCEL"
-                            onPress={this.props.goToEvents.bind(this)}
+                            onPress={() => Actions.pop()}
                         />
                     </ScrollView>
                 </View>

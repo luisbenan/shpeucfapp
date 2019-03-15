@@ -5,6 +5,7 @@ import { Input, Button, PickerInput } from '../general';
 import { RkAvoidKeyboard, RkButton, RkPicker } from 'react-native-ui-kitten';
 import {
     createCommittee,
+    editCommittee,
     cNameChanged,
     cDescriptionChanged,
     loadUser
@@ -15,11 +16,16 @@ import { Actions } from 'react-native-router-flux';
 class CreateCommittee extends Component {
     componentWillMount() {
         this.props.loadUser()
-        this.state = {
-            title: "Create Committee"
+        if(this.props.cName === ''){
+            this.state = {
+                title: "Create Committee"
+            }
         }
-        // if(this.props.cName !== '')
-            // this.setState({title: "Edit Committee"});
+        else {
+            this.state = {
+                title: "Edit Committee"
+            }
+        }
     }
 
     EventCreationError(text) {
@@ -45,7 +51,8 @@ class CreateCommittee extends Component {
             createCommittee,
             id,
             firstName,
-            lastName
+            lastName,
+            email
         } = this.props;
 
         if (cName === '') {
@@ -54,9 +61,9 @@ class CreateCommittee extends Component {
             this.EventCreationError('Please enter a short description of your goal');
         } else{
             if(this.state.title === "Create Committee")
-                createCommittee(cName, cDescription, id, firstName, lastName);
-            // else
-                // editEvent(type, cName, cDescription, date, time, location, points, eventID);
+                createCommittee(cName, cDescription, id, firstName, lastName, email);
+            else
+                editCommittee(cName, cDescription, id);
             Actions.pop();
         }
     }
@@ -157,13 +164,14 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = ({ committee, auth }) => {
     const { cName, cDescription } = committee
-    const { id, firstName, lastName } = auth
+    const { id, firstName, lastName, email } = auth
 
-    return { cName, cDescription, id, firstName, lastName }
+    return { cName, cDescription, id, firstName, lastName, email}
 };
 
 const mapDispatchToProps = {
     createCommittee,
+    editCommittee,
     cNameChanged,
     cDescriptionChanged,
     loadUser

@@ -34,6 +34,7 @@ import More from '../screens/More'
 import PointsBreakDown from '../screens/PointsBreakDown'
 import CommitteeBackEnd from '../screens/CommitteeBackEnd'
 import CreateCommittee from '../components/committee/CreateCommittee'
+import CommitteeDetails from '../components/committee/CommitteeDetails'
 
 import {
   Feed,
@@ -127,6 +128,11 @@ const RouterComponent = () => {
             key="CreateCommittee"
             component={CreateCommittee}
             title="CreateCommittee"
+          />
+          <Scene
+            key="CommitteeDetails"
+            component={CommitteeDetails}
+            title="CommitteeDetails"
           />
         </Stack>
         <Stack key = "election">

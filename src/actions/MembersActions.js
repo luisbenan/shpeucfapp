@@ -81,13 +81,13 @@ export const pictureChangedMember = (text) => {
     payload: text
   };
 };
-export const nationalitychangedMember = (text) => {
+export const nationalityChangedMember = (text) => {
   return {
     type: NATIONALITY_CHANGED_MEMBER,
     payload: text
   };
 };
-export const datebirthchangedMember = (text) => {
+export const datebirthChangedMember = (text) => {
   return {
     type: DATE_BIRTH_CHANGED_MEMBER,
     payload: text
@@ -156,28 +156,28 @@ export const fetchMemberProfile = (userID) => {
   };
 };
 
-export const editMember = ( firstNameU, lastNameU, emailU, collegeU, majorU, pointsU, quoteU, idU, nationalityU, date_birthU ) => {
+export const editMember = ( firstName, lastName, email, college, major, points, quote, id, nationality, date_birth ) => {
   return (dispatch) => {
 
   firebase.database().ref(`/users/${idU}/`).update({
-      firstName: firstNameU,
-      lastName: lastNameU,
-      email: emailU,
-      college: collegeU,
-      major: majorU,
-      points: pointsU,
-      quote: quoteU,
-      nationality: nationalityU,
-      date_of_birth: date_birthU
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      college: college,
+      major: major,
+      points: points,
+      quote: quote,
+      nationality: nationality,
+      date_of_birth: date_birth
     })
     .then(() => firebase.database().ref(`/points/${idU}/`).update({
-      firstName: firstNameU,
-      lastName: lastNameU,
-      points: pointsU,
+      firstName: firstName,
+      lastName: lastName,
+      points: points,
     }))
     .then(() => firebase.database().ref(`/privileges/${idU}/`).update({
-      firstName: firstNameU,
-      lastName: lastNameU,
+      firstName: firstName,
+      lastName: lastName,
       user: true,
       board: false,
       eboard: false,

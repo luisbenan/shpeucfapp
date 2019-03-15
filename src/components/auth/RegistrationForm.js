@@ -23,7 +23,7 @@ import {
   pointsChanged,
   privilegeChanged,
   pictureChanged,
-  nationality_changed, 
+  nationalityChanged, 
   dateBirthChanged,
   confirmPasswordChanged,
   registrationError,
@@ -71,7 +71,7 @@ class RegistrationForm extends Component {
     this.props.confirmPasswordChanged(text);
   }
   onnationality_changed(text) {
-    this.props.nationality_changed(text);
+    this.props.nationalityChanged(text);
   }
   onDateBirthChanged(text) {
     this.props.dateBirthChanged(text);
@@ -401,7 +401,7 @@ const mapDispatchToProps = {
   privilegeChanged,
   pictureChanged,
   passwordChanged,
-  nationality_changed,
+  nationalityChanged,
   dateBirthChanged,
   confirmPasswordChanged,
   registrationError,

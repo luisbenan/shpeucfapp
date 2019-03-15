@@ -12,6 +12,13 @@ import {
 import { Button } from '../components/general'
 import {
     fetchCommittees,
+    cDescriptionChanged,
+    cNameChanged,
+    ownerIDChanged,
+    ownerFNameChanged,
+    ownerLNameChanged,
+    ownerEmailChanged,
+    cIDChanged
 } from '../actions'
 
 const dimension = Dimensions.get('window');
@@ -33,16 +40,53 @@ class CommitteeBackEnd extends Component {
       containerStyle
     } = styles
 
+    const {
+      name,
+      description,
+      ownerID,
+      ownerFName,
+      ownerLName,
+      ownerEmail
+    } = item[1]
 
+    const {
+      cNameChanged,
+      cDescriptionChanged,
+      ownerIDChanged,
+      ownerFNameChanged,
+      ownerLNameChanged,
+      ownerEmailChanged
+    } = this.props
     return(
-      <View style={containerStyle}>
-        <Text style={{fontSize: 20, fontWeight: "bold", flex: 1}}>{item.name}</Text>
-        <Text style={{flex: .3, fontSize: 10}}>{item.CommitteeOwnerFName} {item.CommitteeOwnerLName}</Text>
-      </View>
+      <TouchableOpacity 
+      onPress={() => {
+        cNameChanged(name)
+        cDescriptionChanged(description)
+        ownerIDChanged(ownerID)
+        ownerFNameChanged(ownerFName)
+        ownerLNameChanged(ownerLName)
+        cIDChanged(item[0])
+        ownerEmailChanged(ownerEmail)
+        Actions.CommitteeDetails();
+      }}>
+        <View style={containerStyle}>
+          <Text style={{fontSize: 20, fontWeight: "bold", flex: 1}}>{name}</Text>
+          <Text style={{flex: .3, fontSize: 10}}>{ownerFName} {ownerLName}</Text>
+        </View>
+      </TouchableOpacity>
     )
   }
 
+  
   render() {
+
+    const {
+      committeeList
+    } = this.props
+    let data = []
+    if(committeeList !== undefined && committeeList !== null){
+      data = Object.entries(committeeList);
+    }
     const {
         tabBar,
         tabBarText,
@@ -57,7 +101,7 @@ class CommitteeBackEnd extends Component {
         </View>
         <View style={content}>
           <FlatList
-          data={Object.values(this.props.committeeList)}
+          data={data}
           extraData={this.state}
           keyExtractor={this._keyExtractor}
           renderItem={({item, separators}) => (
@@ -126,6 +170,13 @@ const mapStateToProps = ({ committee }) => {
 
 const mapDispatchToProps = {
    fetchCommittees,
+   cDescriptionChanged,
+   cNameChanged,
+   ownerIDChanged,
+   ownerFNameChanged,
+   ownerLNameChanged,
+   ownerEmailChanged,
+   cIDChanged
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommitteeBackEnd);
