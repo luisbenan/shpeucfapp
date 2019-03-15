@@ -27,6 +27,11 @@ const menuItems = [
       icon: 'check',
       screen: 'Statistics'
     },
+    {
+      title: 'Committee',
+      icon: 'check',
+      screen: 'CommitteeBackEnd'
+    },
 ];
 
 class BackEnd extends Component {

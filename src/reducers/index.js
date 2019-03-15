@@ -5,6 +5,7 @@ import EventsReducer from './EventsReducer';
 import PostReducer from './PostReducer';
 import GeneralReducer from './GeneralReducer';
 import ElectionReducer from './ElectionReducer';
+import CommitteeReducer from './CommitteeReducer';
 
 export default combineReducers({
   auth: AuthReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
   events: EventsReducer,
   post: PostReducer,
   general: GeneralReducer,
-  elect: ElectionReducer
+  elect: ElectionReducer,
+  committee: CommitteeReducer
 });

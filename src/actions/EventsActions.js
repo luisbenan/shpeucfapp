@@ -35,17 +35,17 @@ function makeCode(length) {
   return text;
 }
 
-export const createEvent = (typeU, nameU, descriptionU, dateU, timeU, locationU, pointsU ) => {
+export const createEvent = (type, name, description, date, time, location, points ) => {
 
   firebase.database().ref('/events/').push({ 
-      type: typeU,
-      name: nameU,
-      description: descriptionU,
-      date: dateU,
-      time: timeU,
+      type: type,
+      name: name,
+      description: description,
+      date: date,
+      time: time,
       eventActive: false,
-      location: locationU,
-      points: pointsU,
+      location: location,
+      points: points,
       code:  makeCode(4)})
     .then(() => Alert.alert('Event Created','Successful'))
     .catch((error) => Alert.alert('Event Created Failed', 'Failure'));
@@ -76,16 +76,16 @@ export const closeCheckIn = (eventID) => {
     }
 };
 
-export const editEvent = (typeU, nameU, descriptionU, dateU, timeU, locationU, pointsU, eventIDU ) => {
+export const editEvent = (type, name, description, date, time, location, points, eventID ) => {
 
-  firebase.database().ref(`/events/${eventIDU}`).update({ 
-      type: typeU,
-      name: nameU,
-      description: descriptionU,
-      date: dateU,
-      time: timeU,
-      location: locationU,
-      points: pointsU,
+  firebase.database().ref(`/events/${eventID}`).update({ 
+      type: type,
+      name: name,
+      description: description,
+      date: date,
+      time: time,
+      location: location,
+      points: points,
     })
     .then(() => Alert.alert('Event Edited','Successful'))
     .catch((error) => Alert.alert('Event edit Failed', 'Failure'));

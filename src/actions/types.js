@@ -103,3 +103,10 @@ export const POSITION_DESCRIPTION_CHANGED = "position_description_changed"
 export const GO_TO_CANDIDATE_FORM = "go_to_candidate_form"
 export const GO_TO_POSITION_FORM = "go_to_position_form"
 export const GET_POSITIONS = "get_positions"
+
+// CommitteeActions
+export const C_NAME_CHANGED = "c_name_changed"
+export const C_DESCRIPTION_CHANGED = "c_description_changed"
+export const CREATE_COMMITTEE = "create_committee"
+export const FETCH_COMMITTEES = "fetch_committees"
+

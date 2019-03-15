@@ -32,6 +32,8 @@ import ElectionCandidates from '../screens/ElectionCandidates'
 import Statistics from '../screens/Statistics'
 import More from '../screens/More'
 import PointsBreakDown from '../screens/PointsBreakDown'
+import CommitteeBackEnd from '../screens/CommitteeBackEnd'
+import CreateCommittee from '../components/committee/CreateCommittee'
 
 import {
   Feed,
@@ -113,6 +115,18 @@ const RouterComponent = () => {
             key="createStatistics"
             component={CreateStatistics}
             title="Statistics"
+          />
+        </Stack>
+        <Stack key = "committee" hideNavBar>
+          <Scene
+            key="CommitteeBackEnd"
+            component={CommitteeBackEnd}
+            title="CommitteeBackEnd"
+          />
+          <Scene
+            key="CreateCommittee"
+            component={CreateCommittee}
+            title="CreateCommittee"
           />
         </Stack>
         <Stack key = "election">
