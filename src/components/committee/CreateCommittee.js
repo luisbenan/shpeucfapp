@@ -49,12 +49,12 @@ class CreateCommittee extends Component {
             cName,
             cDescription,
             createCommittee,
+            cID,
             id,
             firstName,
             lastName,
             email
         } = this.props;
-
         if (cName === '') {
             this.EventCreationError('Please enter committee name');
         } else if (cDescription === '') {
@@ -63,7 +63,7 @@ class CreateCommittee extends Component {
             if(this.state.title === "Create Committee")
                 createCommittee(cName, cDescription, id, firstName, lastName, email);
             else
-                editCommittee(cName, cDescription, id);
+                editCommittee(cName, cDescription, cID);
             Actions.pop();
         }
     }
@@ -163,10 +163,10 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = ({ committee, auth }) => {
-    const { cName, cDescription } = committee
+    const { cName, cDescription, cID } = committee
     const { id, firstName, lastName, email } = auth
 
-    return { cName, cDescription, id, firstName, lastName, email}
+    return { cName, cDescription, id, firstName, lastName, email, cID}
 };
 
 const mapDispatchToProps = {

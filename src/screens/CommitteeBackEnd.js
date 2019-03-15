@@ -55,7 +55,8 @@ class CommitteeBackEnd extends Component {
       ownerIDChanged,
       ownerFNameChanged,
       ownerLNameChanged,
-      ownerEmailChanged
+      ownerEmailChanged,
+      cIDChanged
     } = this.props
     return(
       <TouchableOpacity 
