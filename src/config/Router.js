@@ -12,6 +12,7 @@ import ResetPasswordForm from '../components/auth/ResetPasswordForm';
 import CandidateForm from '../components/elect/CandidateForm'
 import PositionForm from '../components/elect/PositionForm'
 import CreateStatisticForm from '../components/stats/CreateStatisticForm'
+import ViewStatistics from '../components/stats/ViewStats'
 
 import { WebPageShow, PostShow, ComingSoon } from '../components/general';
 
@@ -102,9 +103,14 @@ const RouterComponent = () => {
             title="Statistics"
           />
           <Scene
-            key="createStatistics"
+            key="CreateStatistics"
             component={CreateStatisticForm}
             title="Create Statistic"
+          />
+          <Scene
+            key="ViewStatistics"
+            component={ViewStatistics}
+            title="View Statistics"
           />
         </Stack>
         <Stack key = "election">

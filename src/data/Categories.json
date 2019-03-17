@@ -1,10 +1,28 @@
 [
-	[
-		"College",
-		"Major",
-		"Class Standing",
-		"GPA",
-		"Points",
-		"Nationality"
-	]
+	{
+		"type": "string",
+		"key": "College"
+	},
+	{
+		"type": "string",
+		"key": "Major"
+	},
+	{
+		"type": "checkbox",
+		"key": "Class Standing",
+		"value": ["Freshman", "Sophomore", "Junior", "Senior"]	
+	},
+	{
+		"type": "checkbox",
+		"key": "GPA",
+		"value": ["(0, 2.0]", "(2.0, 2.5]", "(2.5, 3.0]", "(3.0, 3.5]", "(3.5, 4.0]"]
+	},
+	{
+		"type": "number",
+		"key": "Points"
+	},
+	{
+		"type": "string",
+		"key": "Nationality"
+	}
 ]

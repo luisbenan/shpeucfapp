@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
 import { ScrollView, StyleSheet, FlatList, Text, View, TouchableOpacity, Dimensions } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
-import { Button } from '../components/general/Button';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const menuItems = [
 	{
-		title: 'Delete Graph',
-		icon: 'android',
-		screen: 'Forms'
+		title: 'Create Graph',
+		icon: 'build',
+		screen: 'CreateStatistics'
+	},
+	{
+		title: 'View Graph',
+		icon: 'search',
+		screen: 'ViewStatistics'
 	}];
 
 const dimension = Dimensions.get('window');
@@ -30,7 +35,6 @@ export default class Statistics extends Component {
 	_keyExtractor = (item, index) => index;
 	render() {
 		const {
-			buttonContainerStyling,
 			page,
 			tabBar,
 			tabBarText
@@ -39,7 +43,12 @@ export default class Statistics extends Component {
 	return (
 		<View style={page}>
 			<View style={tabBar}>
+				<View style={{flexDirection:'column', justifyContent:'center', margin: 15}}>
+					<Ionicons size={25} name="md-arrow-back" onPress={() => Actions.more()} />
+				</View>
+				<View style={{flexDirection:'column', justifyContent:'center'}}>
 					<Text style={tabBarText}>Statistics</Text>
+				</View>
 			</View>
 
 			  <ScrollView>
@@ -50,33 +59,25 @@ export default class Statistics extends Component {
 					renderItem={this.renderItem}
 			  />
 			  </ScrollView>
-			  <View style={buttonContainerStyling}>
-					<Button
-						onPress={() => Actions.createStatistics()}
-						title={"Create Statistics"}
-					/>
-			  </View>
 		 </View>
 	 );
 	};
 }
 
 const styles = StyleSheet.create({
-	buttonContainerStyling: {
-		margin: 5
-	},
 	page: {
 		flex: 1,
 		backgroundColor: '#ebebf1',
 	},
-	tabBar : {
+	tabBar: {
 		height: dimension.height * .1,
 		backgroundColor: '#fff',
 		borderWidth: 1,
 		borderStyle: "solid",
 		borderColor: "#0005",
+		flexDirection: "row"
 	},
-	tabBarText : {
+	tabBarText: {
 		color: '#000',
 		fontSize: 20,
 		margin: 20,
