@@ -137,7 +137,7 @@ class Profile extends Component {
 const styles = StyleSheet.create({
   headerInfoContainer: {
     flex: .6,
-    backgroundColor: '#2C3239',
+    backgroundColor: '#21252b',
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#e0e6ed22',
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
 	},
 	bioContainer: {
     flex: 1,
-		backgroundColor: '#2C3239'
+		backgroundColor: '#0c0b0b'
 	},
 	socialmediatext: {
 		flex:1,
