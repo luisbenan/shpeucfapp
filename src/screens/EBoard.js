@@ -18,6 +18,8 @@ class EBoard extends Component {
       shpeInfoContainer,
       shpeInfoRow,
       infoLabel,
+      contactStyle,
+      contactInfo,
       infoValue,
       signalInfoLabel,
       titleColor } = styles;
@@ -26,7 +28,7 @@ class EBoard extends Component {
       <View style={styles.container}>
         <ScrollView style={{backgroundColor: '#0c0b0b'}}>
           <Card
-            title='Piero Castillo'
+            title='Ana Riveros'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -39,14 +41,20 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2014/06/Piero-Castillo.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-36-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'president.shpeucf@gmail.com'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Nicole Vargas'
+            title='Sebastian Hernandez'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -59,34 +67,20 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2014/06/Nicole-Vargas-Gonzalez.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-4-150x150.jpg"}}
                   />
               </View>
-            </View>
-          </Card>
-
-          <Card
-            title='Yamil Herrera'
-            titleStyle={titleColor}
-            containerStyle={cardContainer}>
-            <View style={shpeInfoContainer}>
-              <View style={shpeInfoRow}>
-                <Text style={infoLabel}>
-                  {'Graduate Ambassador'}
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'vpexternal.shpeucf@gmail.com'}
                 </Text>
-              </View>
-              <View style={shpeInfoRow}>
-                <Avatar
-                  rounded
-                  xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2016/03/Yamil_Herrera_17-18-150x150.jpg"}}
-                  />
-              </View>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Ana Riveros'
+            title='Carlos Arboleda'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -99,14 +93,46 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2016/03/Ana_Riveros_17-18-150x150.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-29-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'shpe.ucf.chapter@gmail.com'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Daniel Castro'
+            title='Tomas Serna'
+            titleStyle={titleColor}
+            containerStyle={cardContainer}>
+            <View style={shpeInfoContainer}>
+              <View style={shpeInfoRow}>
+                <Text style={infoLabel}>
+                  {'Secretary'}
+                </Text>
+              </View>
+              <View style={shpeInfoRow}>
+                <Avatar
+                  rounded
+                  xlarge
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-8-150x150.jpg"}}
+                  />
+              </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'shpe.ucf.chapter@gmail.com'}
+                </Text>
+                </Text>
+            </View>
+          </Card>
+
+          <Card
+            title='Andres Alvarez'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -119,14 +145,46 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://aerostructures.cecs.ucf.edu/wp-content/uploads/2014/04/IMG_7899.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-32-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'treasurer.shpeucf@gmail.com'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Joel Montano'
+            title='Desiree Dominguez'
+            titleStyle={titleColor}
+            containerStyle={cardContainer}>
+            <View style={shpeInfoContainer}>
+              <View style={shpeInfoRow}>
+                <Text style={infoLabel}>
+                  {'Graduate Ambassador'}
+                </Text>
+              </View>
+              <View style={shpeInfoRow}>
+                <Avatar
+                  rounded
+                  xlarge
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-5-150x150.jpg"}}
+                  />
+              </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'dominguezdesiree@knights.ucf.edu'}
+                </Text>
+                </Text>
+            </View>
+          </Card>
+
+          <Card
+            title='Camille Morar'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -139,15 +197,21 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/16789825_572640409613293_3421786378705305600_n.jpg?ig_cache_key=MTQ1NDU2OTk3NDc0NDQ0NDA1OQ%3D%3D.2&se=8"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/Image-from-iOS-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'camille.morar@knights.ucf.edu'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
 
           <Card
-            title='Carlos Arboleda'
+            title='Juancarlos Hernandez'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -160,14 +224,20 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2016/03/Chris_Hernandez_17-18-150x150.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEHeadshotsCropped-4-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'jhhernandez262@knights.ucf.edu'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Ignacio Lopez'
+            title='Jaime Hernandez'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -180,14 +250,20 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2016/03/Ignacio_Lopez_17-18-150x150.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-13-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'shpejr.shpeucf@gmail.com'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Luis Benavides'
+            title='Haniel Diaz'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -200,14 +276,20 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "http://www.shpeucf.com/wp-content/uploads/2016/03/Luis_Benavides_17-18-150x150.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-15-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'tech.shpeucf@gmail.com'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
           <Card
-            title='Lucyana Panti'
+            title='Linette Martinez'
             titleStyle={titleColor}
             containerStyle={cardContainer}>
             <View style={shpeInfoContainer}>
@@ -220,9 +302,93 @@ class EBoard extends Component {
                 <Avatar
                   rounded
                   xlarge
-                  source={{uri: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzkAAAAJGQzODc2ZWQxLTc1ZWMtNGU1YS1hOWYyLTNmNmEwZGYwMjJjYQ.jpg"}}
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-33-150x150.jpg"}}
                   />
               </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'Lmartinez2402@knights.ucf.edu'}
+                </Text>
+                </Text>
+            </View>
+          </Card>
+
+          <Card
+            title='Francisco Rivera'
+            titleStyle={titleColor}
+            containerStyle={cardContainer}>
+            <View style={shpeInfoContainer}>
+              <View style={shpeInfoRow}>
+                <Text style={infoLabel}>
+                  {'Membership Chair'}
+                </Text>
+              </View>
+              <View style={shpeInfoRow}>
+                <Avatar
+                  rounded
+                  xlarge
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/20190128_132023-150x150.jpg"}}
+                  />
+              </View>
+              <Text style={{fontSize: 17, fontWeight: "bold", alignItems: "center", justifyContent: "center", color: 'white'}}>
+                  {'Contact:  '}
+                  <Text style={{fontSize: 17, fontWeight: 'normal', alignItems: "center", justifyContent: "center", color: '#FFC107', textDecorationLine: 'underline'}}>
+                  {'francisco.rivera0719@knights.ucf.edu'}
+                </Text>
+                </Text>
+            </View>
+          </Card>
+
+          <Card
+            title='Mariana González'
+            titleStyle={titleColor}
+            containerStyle={cardContainer}>
+            <View style={shpeInfoContainer}>
+              <View style={shpeInfoRow}>
+                <Text style={infoLabel}>
+                  {'Marketing Chair'}
+                </Text>
+              </View>
+              <View style={shpeInfoRow}>
+                <Avatar
+                  rounded
+                  xlarge
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-9-150x150.jpg"}}
+                  />
+              </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'M3gonzalez@knights.ucf.edu'}
+                </Text>
+                </Text>
+            </View>
+          </Card>
+
+          <Card
+            title='Tatiana Ocampo'
+            titleStyle={titleColor}
+            containerStyle={cardContainer}>
+            <View style={shpeInfoContainer}>
+              <View style={shpeInfoRow}>
+                <Text style={infoLabel}>
+                  {'Outreach Chair'}
+                </Text>
+              </View>
+              <View style={shpeInfoRow}>
+                <Avatar
+                  rounded
+                  xlarge
+                  source={{uri: "https://www.shpeucf.com/wp-content/uploads/2014/06/SHPEofficer-2-150x150.jpg"}}
+                  />
+              </View>
+              <Text style={contactStyle}>
+                  {'Contact:  '}
+                  <Text style={contactInfo}>
+                  {'outreach.shpeucf@gmail.com'}
+                </Text>
+                </Text>
             </View>
           </Card>
 
@@ -275,7 +441,24 @@ class EBoard extends Component {
       fontWeight: 'bold',
     },
     titleColor: {
+      color: '#FFC107'
+    },
+
+    contactStyle: {
+      fontSize: 18, 
+      fontWeight: "bold", 
+      alignSelf: "center", 
+      justifyContent: "center", 
       color: 'white'
+    },
+
+    contactInfo: {
+      fontSize: 18,
+      fontWeight: 'normal',
+      alignSelf: "center",
+      justifyContent: "center",
+      color: '#FFC107',
+      textDecorationLine: 'underline'
     },
 
   });
