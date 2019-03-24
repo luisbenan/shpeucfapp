@@ -21,6 +21,12 @@ import {
       privilege: "user"
     },
     {
+      title: 'E-Board',
+      icon: 'people',
+      screen: 'EBoard',
+      privilege: "user"
+    },
+    {
       title: 'Resources',
       icon: 'layers',
       screen: 'Resources',
@@ -74,7 +80,7 @@ class More extends Component {
   render() {
   
     return (
-      <ScrollView style={{backgroundColor: '#2C3239'}}>
+      <ScrollView style={{backgroundColor: '#21252b'}}>
         <FlatList
           removeClippedSubviews={false}
           extraData={this.state}
