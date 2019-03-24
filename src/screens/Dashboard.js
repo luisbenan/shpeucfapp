@@ -52,8 +52,8 @@ class Dashboard extends Component {
 		} = styles
 		return (
 			<View>
-				<Text style={[textColor,{fontSize: 20}]}>{greeting}, {this.props.firstName}.</Text>
-				<Text style={textColor}>Today is {months[month]} {day}</Text>
+				<Text style={[textColor,{fontSize: 20, alignSelf: 'center'}]}>{greeting}, {this.props.firstName}.</Text>
+				<Text style={[textColor,{fontSize: 14, alignSelf: 'center'}]}>Today is {months[month]} {day}</Text>
 			</View>
 		)
 	}
@@ -215,8 +215,8 @@ const styles = StyleSheet.create({
 	tabBar: {
 		backgroundColor: '#fff',
 		justifyContent: 'center',
-		alignItems:'center',
-		height: dimension.height * 0.1
+		//alignItems:'center',
+		height: dimension.height * 0.08
 	},
 	tabBarText: {
 		color: '#000',
