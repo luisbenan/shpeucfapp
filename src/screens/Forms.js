@@ -74,14 +74,14 @@ const forms = [
 class Forms extends Component {
   render() {
     return (
-      <ScrollView style={{backgroundColor: '#2C3239'}}>
+      <ScrollView style={{backgroundColor: 'black'}}>
         {
           forms.map((form, i) => (
             <View key={i}>
               <Text style={styles.sectionTitle}>
                 {form.group.name}
               </Text>
-              <List containerStyle={{ backgroundColor: '#0c0b0b', marginTop: 10 }}>
+              <List containerStyle={{ backgroundColor: '#2C3239', marginTop: 10 }}>
                 {
                 form.group.items.map((item, i) => (
                     <ListItem
