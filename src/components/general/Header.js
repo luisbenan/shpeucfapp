@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, Dimensions } from 'react-native';
 import firebase from 'firebase';
 
+const dimension = Dimensions.get('window');
 const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
@@ -26,7 +27,7 @@ const Header = (props) => {
 
 const styles = {
   viewStyle: {
-    height: 64,
+    height: dimension.height * 0.08,
     paddingTop: 15,
     shadowColor: '#000',
     backgroundColor: '#FFF',
