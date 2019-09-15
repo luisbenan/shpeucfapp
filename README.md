@@ -111,6 +111,7 @@ A step by step series of examples that tell you how to get a development env run
 
 ## Authors :man_technologist:
 
+* **Sergio Perez** - *Initial prototype* - [Github Repo](https://github.com/grindlock)
 * **Luis Benavides** - *Initial work* - [Github Repo](https://github.com/luisbenan)
 * **Haniel Diaz** - *Continued work* - [Github Repo](https://github.com/HanielDiaz)
 
