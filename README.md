@@ -52,14 +52,14 @@ What things you need to install the software and how to install them
 A step by step series of examples that tell you how to get a development env running
 
 #### Install the repository
-* open the terminal/Command Prompt and use `cd /path` to go to a folder. Preferably Desktop
+* Open the terminal/Command Prompt and use `cd /path` to go to a folder. Preferably Desktop
 * Type: `git clone https://github.com/SHPEUCF/shpeucfapp.git` :octocat:
 
 #### Open the folder on the terminal/Command Prompt
-* open the terminal/Command Prompt and type: `cd {location of the repo}`
+* Open the terminal/Command Prompt and type: `cd {location of the repo}`
 
-#### install all dependencies
-* open the terminal/Command Prompt and type: `npm install`
+#### Install all dependencies
+* Open the terminal/Command Prompt and type: `npm install`
 
 
 
@@ -70,11 +70,11 @@ A step by step series of examples that tell you how to get a development env run
 * Open up Android Studio
 * Open up the AVD(Android Virtual Device) manager
 * Run an emulator that you have downloaded already
-* open the terminal/Command Prompt, go to the repo and type: `react-native run-android`
+* Open the terminal/Command Prompt, go to the repo and type: `react-native run-android`
 
 
 #### :iphone:Running on an iOS simulator:
-* open the terminal/Command Prompt, go to the repo and type: `react-native run-ios`
+* Open the terminal/Command Prompt, go to the repo and type: `react-native run-ios`
 
 ### Debugging Setup :man_technologist:
 #### JAVA_HOME missing on:
